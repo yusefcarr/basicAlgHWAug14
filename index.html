@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- falsy bouncer exercise -->
+
+    function bouncer(arr) {
+
+        var holderArray=[];
+        holderArray = arr.filter(removeFalseVar);
+        
+          return holderArray;
+        }
+        
+        function removeFalseVar(value){
+          return Boolean(value);
+        }
+        
+        bouncer([7, "ate", "", false, 9]);
+
+        <!-- chunky monkey exercise -->
+
+        function chunkArrayInGroups(arr, size) {
+
+            var holderArray = [];
+            var count = 0;
+          
+            while(count<arr.length){
+              holderArray.push(arr.slice(count,count = count + size));
+            }
+            return holderArray;
+          }
+          
+          chunkArrayInGroups(["a", "b", "c", "d"], 2);
+          
+</body>
+</html>
